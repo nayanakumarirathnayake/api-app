@@ -26,7 +26,7 @@ app.get('/api', (req, res) => {
     res.send('hello')
 })
 
-app.get('/api/machan', (req,res) => {
+app.get('/api/game', (req,res) => {
     res.send('hello machan ')
 })
 

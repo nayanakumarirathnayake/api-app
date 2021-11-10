@@ -19,10 +19,10 @@ mongoose.connect(
 
 
 app.use(express.json())
-app.use('/', require('./routes/school'))
-app.use('/', require('./routes/student'))
+app.use('/api', require('./routes/school'))
+app.use('/api', require('./routes/student'))
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.send('hello')
 })
 

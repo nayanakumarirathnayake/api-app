@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express()
 const mongoose = require('mongoose')
+const cors = require('cors')
 
 
 mongoose.connect(
@@ -17,7 +18,7 @@ mongoose.connect(
     console.log(err);
 })
 
-
+app.use(cors())
 app.use(express.json())
 app.use('/api', require('./routes/school'))
 app.use('/api', require('./routes/student'))
